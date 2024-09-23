@@ -15,7 +15,7 @@ const Navbar = () => {
     },
     {
       displaytext: "Marketplace",
-      link: "https://coming-soon-devxaves.vercel.app",
+      link: "https://bharatse-marketplace.vercel.app/",
     },
     {
       displaytext: "Community",
