@@ -6,13 +6,14 @@ import './About.css';
 
 const About = () => {
   return (
-    <div className='my-12 flex flex-row w-full px-16 py-16 about-bg about-flex'>
-      <div className='flex flex-col w-1/3 pr-5 justify-center india-post-div'>
-        <div className="app__about-content-1 pr-10 pb-8">
+    <div className='bg-white'>
+    <div className='flex flex-row w-full px-16 py-16 my-12 about-bg about-flex'>
+      <div className='flex flex-col justify-center w-1/3 pr-5 india-post-div'>
+        <div className="pb-8 pr-10 app__about-content-1">
         <h1>SEAMLESS DELIVERIES ACROSS THE WORLD WITH OUR VERY OWN</h1>
       </div>
-      <div className="flex app__about-content-1 content-center">
-          <img className="relative ps-6 w-24 rounded-lg content-center" src={images.IndianPost} alt="Image Collection 2" />
+      <div className="flex content-center app__about-content-1">
+          <img className="relative content-center w-24 rounded-lg ps-6" src={images.IndianPost} alt="Image Collection 2" />
           <h1 className='text-center align-middle mx-3.5 m-3 text-red-700'>India Post</h1>
         </div>
       </div>
@@ -35,7 +36,7 @@ const About = () => {
             </div>
         </div>
             </div>
-            <div className='app__about pt-10'>
+            <div className='pt-10 app__about'>
         <div className="app__about-content-2">
           <AiOutlineCrown className='icon'/>
           <div>
@@ -54,6 +55,11 @@ const About = () => {
       </div>
     </div>
     
+    </div>
+    <div className="flex justify-center makeIn">
+      <h1 className="text-4xl font-bold">Promoting <span className="text-orange-500">Make in </span><span className='text-green-600'>India</span></h1>
+      <img className="w-24 mx-3" src={images.makeIndia} alt="" />
+      </div>
     </div>
     
   )

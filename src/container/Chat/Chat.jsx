@@ -35,7 +35,7 @@ function Chat() {
     setAnswer("Loading your Personalized Answer...");
     try {
       const response = await axios({
-        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${gemi}`,
+        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyAfH8ay-86RjWqG4YC1dNGPNJntyC5_jHk`,
         method: "post",
         data: {
           contents: [{ parts: [{ text: "You are Bharati, an AI Assistant for our ecommerce marketplace named BharatSe. talk as a friend and also as a customer support executive. We are a platform that sells various Indian ethnic and heritage products across the world. We specialize in Clothings, food etc. You must answer signifying and promoting the various traditional items of India. Answer politely and Use Emojis but answer short and crisp manner. Also don't answer any questions unrelated to the shopping or our e commerce platform. Politely reject the answer for any other questions" + question }] }],
@@ -66,7 +66,7 @@ function Chat() {
       <div className={`${isHover?'bg-bharatiai-hover':''} fixed z-9999 bottom-8 right-8 h-max w-max border-2 border-green-500 flex flex-row rounded-5xl justify-end items-center shadow-lg bg-bharatiai  transition-all  duration-350`}>
         <div className={`text-2xl text-orange-600 flex justify-center items-center w-control h-control  transition-all delay-150 duration-350 overflow-x-hidden`}>Bharati<span className="text-green-600">.AI</span></div>
         <div
-          className="w-max p-4 text-white transition-all duration-300 transform bg-orange-500 rounded-full cursor-pointer z-9999 scale-110 hover:bg-orange-600 hover:scale-125"
+          className="p-4 text-white transition-all duration-300 transform scale-110 bg-orange-500 rounded-full cursor-pointer w-max z-9999 hover:bg-orange-600 hover:scale-125"
           onClick={() => setIsOpen(!isOpen)}
           onMouseEnter={()=>setIsHover(true)}
           onMouseLeave={()=>{!isOpen && setIsHover(false)}}
@@ -96,7 +96,7 @@ function Chat() {
         <form onSubmit={generateAnswer} className="flex flex-col flex-grow">
           <textarea
             required
-            className="w-full p-3 my-2 border border-white placeholder-white text-white rounded outline-none focus:outline-none focus:shadow-xl bg-transparent transition-all"
+            className="w-full p-3 my-2 text-white placeholder-white transition-all bg-transparent border border-white rounded outline-none focus:outline-none focus:shadow-xl"
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
             placeholder="Ask anything"
@@ -113,7 +113,7 @@ function Chat() {
           </button>
         </form>
 
-        {(answer!="" || generatingAnswer) && <div className="h-56 overflow-auto bg-gray-100 rounded-lg p-3mt-4 bg-gray-chatbox p-2 px-3 pr-5 text-white my-5 mx-3">
+        {(answer!="" || generatingAnswer) && <div className="h-56 p-2 px-3 pr-5 mx-3 my-5 overflow-auto text-white bg-gray-100 rounded-lg p-3mt-4 bg-gray-chatbox">
           <ReactMarkdown>{answer}</ReactMarkdown>
         </div>}
       </div>
